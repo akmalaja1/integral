@@ -7,8 +7,8 @@ def hitung_integral():
     try:
         # Ambil input dari user
         fungsi = entry_fungsi.get()
-        batas_bawah = float(entry_bawah.get())
-        batas_atas = float(entry_atas.get())
+        batas_bawah = (entry_bawah.get())
+        batas_atas = (entry_atas.get())
         
         # Parse ekspresi string menjadi ekspresi sympy
         x = symbols('x')

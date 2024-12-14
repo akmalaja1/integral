@@ -1,2 +1,4 @@
 sympy
 tkinter
+ttkbootstrap
+time

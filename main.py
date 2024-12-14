@@ -1,12 +1,16 @@
-import sympy as sp
+from integral_utility import hitung_integral_dengan_langkah
 
-def hitung_integral(fungsi_str, batas_bawah, batas_atas):
-    x = sp.Symbol('x')
-    try:
-        # Konversi string fungsi menjadi fungsi matematika
-        fungsi = sp.sympify(fungsi_str)
-        # Hitung integral
-        hasil = sp.integrate(fungsi, (x, batas_bawah, batas_atas))
-        return hasil
-    except Exception as e:
-        return f"Error: {e}"
+# Fungsi yang akan diintegralkan
+fungsi = "3*x**2 + 2*x - 5"
+
+# Kasus 1: Tanpa batas bawah dan batas atas (integral tak tentu)
+result_tak_tentu = hitung_integral_dengan_langkah(fungsi)
+print("Integral Tak Tentu:")
+print(result_tak_tentu)
+
+# Kasus 2: Dengan batas bawah dan batas atas (integral tentu)
+batas_bawah = 1
+batas_atas = 4
+result_tentu = hitung_integral_dengan_langkah(fungsi, batas_bawah, batas_atas)
+print("\nIntegral Tentu:")
+print(result_tentu)
